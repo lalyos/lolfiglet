@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo [debug] >&2
+/bin/lolfiglet $(cat)

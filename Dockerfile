@@ -1,4 +1,7 @@
-FROM lalyos/scratch-chmx
+FROM alpine
 ADD https://github.com/lalyos/lolfiglet/releases/download/v0.0.2/lolfiglet-linux /bin/lolfiglet
-RUN ["/bin/chmx", "/bin/lolfiglet"]
-ENTRYPOINT ["/bin/lolfiglet"]
+RUN chmod +x /bin/lolfiglet
+RUN apk add -U bash
+#ENTRYPOINT ["/bin/lolfiglet"]
+ADD start /bin/start
+CMD /bin/start
