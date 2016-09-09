@@ -4,4 +4,5 @@ RUN chmod +x /bin/lolfiglet
 RUN apk add -U bash
 #ENTRYPOINT ["/bin/lolfiglet"]
 ADD start /bin/start
-CMD /bin/start
+LABEL io.cmd.description="Generates lolcat figlet"
+ENTRYPOINT [ "/bin/start" ]
